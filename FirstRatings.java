@@ -14,9 +14,9 @@ import java.io.*;
 public class FirstRatings {
     public static void main(String[] args) throws IOException {
     	FirstRatings test = new FirstRatings();
-    	test.testLoadMovies("./data/ratedmovies_short.csv");
+    	test.testLoadMovies("./data/ratedmoviesfull.csv");
     	System.out.print("\n");
-    	test.testLoadRaters("./data/ratings_short.csv");
+    	test.testLoadRaters("./data/ratings.csv");
     }
     
     
@@ -137,7 +137,7 @@ public class FirstRatings {
     	ArrayList<Rater> raters = new FirstRatings().loadRaters(filename);
     	int numOfRaters = 0;
     	
-    	String aRater = "2";
+    	String aRater = "193";
     	int targetRaterRatings = 0;
     	
     	int maxRatings = 0;
@@ -178,7 +178,7 @@ public class FirstRatings {
     	for (Rater rater : maxRaters) {
     		buffer.append(rater.getID() + " ");
     	}
-    	System.out.print("Raters with most ratings are raters " + buffer.toString() + ": " + maxRaters.size() + "\n");
+    	System.out.print("Raters with most ratings are raters " + buffer.toString() + ": " + maxRatings + "\n");
     	System.out.print("Movie " + targetItem + " has been rated " + numItemRatings + " times" + "\n");
     	System.out.print("Number of rated movies: " + itemSet.size() + "\n");
     }
